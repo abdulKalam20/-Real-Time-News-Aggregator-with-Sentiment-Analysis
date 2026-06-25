@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: newsagg-server
+    env: node
+    region: oregon
+    plan: free
+    rootDir: server
+    buildCommand: npm install
+    startCommand: node index.js
+    envVars:
+      - key: NEWS_API_KEY
+        sync: false
+      - key: NODE_ENV
+        value: production
