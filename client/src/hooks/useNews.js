@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import axios from "axios";
 
-const BASE = process.env.REACT_APP_API_URL || "";
+const BASE = process.env.REACT_APP_API_URL || "https://real-time-news-aggregator-with-sentiment.onrender.com";
 
 export function useNews(category, query, page = 1) {
   const [data, setData] = useState(null);
